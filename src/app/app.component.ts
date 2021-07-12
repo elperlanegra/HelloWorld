@@ -6,16 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  // Property Binding
+  textPlaceHolder = 'Escriba algo aqui'
+  deshabilitado = true
+  imgSrc='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpaQDHlahULtTvIAoCjAC2DYGKQpMzTENuEKQRN_RNHxj0tQWRHyivaZ3e1ozcV6WAeLg&usqp=CAU'
+  
+
+   // Interpolación
   name = 'Manuel Duarte';
 
-
-  // Interpolación
   constructor(){
-    setInterval(()=> this.name = "Manuel", 3000 )
+    setInterval(()=> this.deshabilitado = false, 3000 )
   }
 
   getSuma(num1:number, num2:number){
     return num1 + num2
   }
+
 
 }
