@@ -7,15 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-    listEstudents:any [] = [
-      {name: 'Carlos', status: 'Activo'},
-      {name: 'Juan', status: 'Activo'},
-      {name: 'Pedro', status: 'Activo'},
-      {name: 'Marlon', status: 'Activo'},      
-      {name: 'Tressy', status: 'Activo'},
-      {name: 'Dominga', status: 'Activo'},
-      {name: 'Carlos', status: 'Activo'},
-      {name: 'Carlos', status: 'Activo'},
-    ]
+  listEstudents: any[] = [
+    { name: 'Carlos', status: 'Activo' },
+    { name: 'Juan', status: 'Activo' },
+    { name: 'Pedro', status: 'Activo' },
+    { name: 'Marlon', status: 'Activo' },
+    { name: 'Tressy', status: 'Activo' },
+    { name: 'Dominga', status: 'Activo' },
+    { name: 'Carlos', status: 'Activo' },
+    { name: 'Carlos', status: 'Activo' },
+  ]
+
+
+  showMore = true;
+
+  toogle(): void {
+    this.showMore = !this.showMore
+  }
 
 }
