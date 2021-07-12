@@ -1,40 +1,20 @@
 <div class="container mt-4">
-  <!-- <div class="row">
-     Estamos interpolando 
-    <h3>{{ getSuma(2, 4) }}</h3>
-    <br />
-
-     Property Binding 
-    <input
-      type="text"
-      class="form-control"
-      name=""
-      id=""
-      [placeholder]="textPlaceHolder"
-      [disabled]="deshabilitado"
-    />
-    <br />
-    <img
-      [src]="imgSrc"
-      alt="img"
-      width="250px"
-      height="400px"
-    />
-  </div> -->
-
-  <!-- Event Binding -->
-  <h3>{{ title }}</h3>
-
-  <div class="btn btn-primary" (click)="btnTitle()">show</div>
-
-  <hr />
-  <!-- Two Data Binding -->
-  <input
-    type="text"
-    class="form-control"
-    placeholder="Write"
-    [(ngModel)]="titleTwoDataBinding"
-  />
-  <br />
-  {{ titleTwoDataBinding }}
+  <div class="row">
+    <h3>Listado de estudiantes</h3>
+  </div>
+  <br>
+  <table class="table">
+    <thead>
+      <th>#</th>
+      <th>Name</th>
+      <th>Status</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of listEstudents; let i = index ">
+        <td> {{ i + 1 }} </td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.status }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
