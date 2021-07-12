@@ -3,41 +3,34 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
- // Event Binding
-  title = 'Este es un ejemplo del event binding'
+  // Two Data Binding
+  titleTwoDataBinding = '';
 
-  btnTitle(): void{
-    this.title = "En el proximo ejemplo sera de Two way data-binding", 3000
+
+  // Event Binding
+  title = 'Este es un ejemplo del event binding';
+
+  btnTitle(): void {
+    (this.title = 'En el proximo ejemplo sera de Two way data-binding'), 3000;
   }
-
-
-
-
-
-
-
-
-
 
   // Property Binding
-  textPlaceHolder = 'Escriba algo aqui'
-  deshabilitado = true
-  imgSrc='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpaQDHlahULtTvIAoCjAC2DYGKQpMzTENuEKQRN_RNHxj0tQWRHyivaZ3e1ozcV6WAeLg&usqp=CAU'
-  
+  textPlaceHolder = 'Escriba algo aqui';
+  deshabilitado = true;
+  imgSrc =
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpaQDHlahULtTvIAoCjAC2DYGKQpMzTENuEKQRN_RNHxj0tQWRHyivaZ3e1ozcV6WAeLg&usqp=CAU';
 
-   // Interpolación
+  // Interpolación
   name = 'Manuel Duarte';
 
-  constructor(){
-    setInterval(()=> this.deshabilitado = false, 3000 )
+  constructor() {
+    setInterval(() => (this.deshabilitado = false), 3000);
   }
 
-  getSuma(num1:number, num2:number){
-    return num1 + num2
+  getSuma(num1: number, num2: number) {
+    return num1 + num2;
   }
-
-
 }

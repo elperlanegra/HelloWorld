@@ -21,13 +21,20 @@
       height="400px"
     />
   </div> -->
-  
 
-    <h3>{{ title }}</h3>
-    
-    <div class="btn btn-primary" (click)="btnTitle()">
-        show
-    </div>
+  <!-- Event Binding -->
+  <h3>{{ title }}</h3>
 
+  <div class="btn btn-primary" (click)="btnTitle()">show</div>
 
+  <hr />
+  <!-- Two Data Binding -->
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Write"
+    [(ngModel)]="titleTwoDataBinding"
+  />
+  <br />
+  {{ titleTwoDataBinding }}
 </div>
